@@ -3,6 +3,7 @@ interface Props {
 	title: string;
 }
 
+
 const { title } = Astro.props;
 ---
 
@@ -48,3 +49,9 @@ const { title } = Astro.props;
 			monospace;
 	}
 </style>
+
+<script>
+	import LocomotiveScroll from 'locomotive-scroll';
+
+	const locomotiveScroll = new LocomotiveScroll();
+</script>
