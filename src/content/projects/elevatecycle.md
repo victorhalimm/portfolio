@@ -1,0 +1,29 @@
+---
+title: "ElevateCycle"
+year: "2024"
+category: "Web Application"
+role: "Fullstack Developer"
+name: "ElevateCycle"
+description: "ElevateCycle is an eco-conscious web application designed to streamline and promote recycling activities. The platform connects individuals and recycling centers, making it easier for users to recycle everyday materials and contribute to a sustainable environment."
+githublink: "https://github.com/victorhalimm/ElevateCycle"
+mockup: "/src/assets/elevatecycle-mockup.png"
+problem: "With increasing environmental concerns, many individuals face difficulties in locating accessible recycling centers and understanding the recycling process for different materials. This can lead to recyclable waste ending up in landfills."
+solution: "ElevateCycle bridges the gap between individuals and recycling centers by providing an easy-to-use platform that guides users on how to recycle different materials, locates nearby recycling facilities, and tracks their recycling efforts."
+features_scope:
+  - "Recycling Center Locator"
+  - "Recycling Material Guide"
+  - "User Recycling Tracker"
+  - "Interactive and Intuitive UI"
+development_process: "ElevateCycle was built using modern web technologies such as React and TailwindCSS for a dynamic, responsive front-end. Node.js and Express were used for the backend, integrating a robust database to store and track user recycling data. The app also features location-based services to help users find nearby recycling centers quickly."
+gallery:
+  - "/images/elevatecycle-screenshot1.png"
+  - "/images/elevatecycle-screenshot2.png"
+  - "/images/elevatecycle-screenshot3.png"
+route: "elevatecycle"
+stack:
+  - "React"
+  - "Shadcn"
+  - "Node.js"
+  - "TailwindCSS"
+  - "Firebase"
+---

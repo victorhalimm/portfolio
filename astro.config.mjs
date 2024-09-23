@@ -1,9 +1,19 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, squooshImageService  } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  vite: {
+    ssr: {
+      noExternal: ['react-ts-typewriter'], 
+    },
+  },
+  image: {
+    service: squooshImageService(),
+  },
+
 });
