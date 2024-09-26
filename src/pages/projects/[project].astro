@@ -20,6 +20,8 @@ export async function getStaticPaths() {
 
 const { data } = Astro.props;
 const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}')
+
+console.log(data)
 ---
 
 <Layout title=`${data.name}`>
@@ -30,14 +32,25 @@ const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,
         <a target="_blank" href={data.deployment} class="text-gray-400 hover:text-white underline text-lg">demo</a>
         <span class="text-gray-400 hover:text-white text-lg">/</span>
         <a target="_blank" href={data.githublink} class="text-gray-400 hover:text-white underline text-lg">repo</a>
-      </div>
-      <p class="text-lg text-gray-400">{data.description}</p>
-      <Image
+      </div><Image
         transition:name={data.name}
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
         class="h-full object-cover pt-4"
       />
+      
+      <p class="text-lg text-gray-400">{data.description}</p>
+
+      <p class="text-lg text-gray-400">
+        This app was built with <span class="text-white">{data.stack.join(', ')}</span>.
+      </p>
+      <p class="text-lg text-gray-400">Below are list of features that this application has: </p>
+
+      <ul class="list-disc text-lg list-inside text-gray-400 marker:text-purple-600">
+        {data.features_scope.map((tech) => (
+          <li>{tech}</li>
+        ))}
+      </ul>
     </div>
   </main>
 </Layout>
