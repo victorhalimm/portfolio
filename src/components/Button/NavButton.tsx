@@ -4,11 +4,12 @@ interface Props {
   icon: IconType;
   text: string;
   className?: string;
+  href : string;
 }
 
-const NavButton = ({ icon: Icon, text, className = "" }: Props) => {
+const NavButton = ({ icon: Icon, text, className = "", href }: Props) => {
   return (
-    <button className={`group hover:text-gray-50 duration-75 ${className}`}>
+    <a href={href} target="_blank" className={`group hover:text-gray-50 duration-75 ${className}`}>
       <Icon />
       <span
         className="
@@ -22,7 +23,7 @@ const NavButton = ({ icon: Icon, text, className = "" }: Props) => {
       >
         {text}
       </span>
-    </button>
+    </a>
   );
 };
 

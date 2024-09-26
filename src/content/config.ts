@@ -14,6 +14,7 @@ export const portfolioSchema = z.object({
   gallery: z.array(z.string()),
   route: z.string(),
   stack: z.array(z.string()),
+  deployment: z.string()
 });
 
 export const portfolioCollectionsSchema = z.array(
