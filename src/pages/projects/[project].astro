@@ -26,21 +26,23 @@ console.log(data)
 
 <Layout title=`${data.name}`>
   <main class="min-h-screen">
-    <div class="lg:p-56 flex flex-col space-y-6">
-      <h2 class="text-5xl text-white font-semibold">{data.name}</h2>
-      <div class="flex space-x-2">
-        <a target="_blank" href={data.deployment} class="text-gray-400 hover:text-white underline text-lg">demo</a>
-        <span class="text-gray-400 hover:text-white text-lg">/</span>
-        <a target="_blank" href={data.githublink} class="text-gray-400 hover:text-white underline text-lg">repo</a>
-      </div><Image
+    <div class="lg:p-56 flex flex-col space-y-8">
+      <div class="space-y-4">
+        <h2 class="text-5xl text-white font-semibold">{data.name}</h2>
+        <div class="flex space-x-2">
+          <a target="_blank" href={data.deployment} class="text-gray-400 hover:text-white underline text-lg">demo</a>
+          <span class="text-gray-400 hover:text-white text-lg">/</span>
+          <a target="_blank" href={data.githublink} class="text-gray-400 hover:text-white underline text-lg">repo</a>
+        </div>
+      </div>
+      <Image
         transition:name={data.name}
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
         class="h-full object-cover pt-4"
       />
-      
       <p class="text-lg text-gray-400">{data.description}</p>
-
+      
       <p class="text-lg text-gray-400">
         This app was built with <span class="text-white">{data.stack.join(', ')}</span>.
       </p>
