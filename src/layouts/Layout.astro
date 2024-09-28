@@ -1,39 +1,50 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-	title: string;
+  title: string;
 }
-
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="A showcase of my projects as an aspiring fullstack developer." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
-		<title>{title}</title>
-	</head>
-	<body class="bg-background md:px-32">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A showcase of my projects as an aspiring fullstack developer."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body class="bg-background md:px-32 font-sans">
+    <slot />
+  </body>
 </html>
 
+<style is:global>
+  @font-face {
+    font-family: "SourceSans3";
+    src: url("/fonts/SourceSans3.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
 
 <script>
-	import LocomotiveScroll from 'locomotive-scroll';
+  import LocomotiveScroll from "locomotive-scroll";
 
-	const locomotiveScroll = new LocomotiveScroll();
+  const locomotiveScroll = new LocomotiveScroll();
 
-	document.addEventListener('pageshow', () => {
-		window.scrollTo({
-			top: 0,
-		})
-	})
+  document.addEventListener("pageshow", () => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
 </script>
