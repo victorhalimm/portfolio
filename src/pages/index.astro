@@ -86,7 +86,7 @@ h1 { font-size: 0.5em }
     </p>
   </main>
 
-  <main class="min-h-screen">
+  <main class="min-h-[80vh] md:min-h-screen">
     <div class="grid md:grid-cols-2 grid-cols-1 gap-8  md:gap-4">
       {
         parsedProjectCollections?.map(({data}) => (
@@ -98,7 +98,7 @@ h1 { font-size: 0.5em }
                src={im[data.mockup]()} 
                transition:name={data.name}
               alt={`${data.title} mockup`}
-              class="h-[30vh] md:h-full object-cover md:group-hover:border-2 transition-all duration-75 md:border-accent"
+              class="h-[25vh] md:h-full object-cover md:group-hover:border-2 transition-all duration-75 md:border-accent"
             />
             <div class="group-hover:text-accent text-content mt-2 md:mt-4 text-base">
               {data.title}
