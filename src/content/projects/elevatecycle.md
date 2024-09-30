@@ -12,7 +12,7 @@ problem: "With increasing environmental concerns, many individuals face difficul
 solution: "ElevateCycle bridges the gap between individuals and recycling centers by providing an easy-to-use platform that guides users on how to recycle different materials, locates nearby recycling facilities, and tracks their recycling efforts."
 features_scope:
   - "Pomodoro Timer for Time Management"
-  - "Efficient Note-Taking System (Notionn-Inspired)"
+  - "Efficient Note-Taking System (Notion-Inspired)"
   - "Task Scheduling and Calendar Integration"
   - "Streamlined All-In-One Dashboard"
 development_process: "ElevateCycle was built using modern web technologies such as React and TailwindCSS for a dynamic, responsive front-end. Node.js and Express were used for the backend, integrating a robust database to store and track user recycling data. The app also features location-based services to help users find nearby recycling centers quickly."

@@ -25,30 +25,30 @@ console.log(data)
 ---
 
 <Layout title=`${data.name}`>
-  <main class="min-h-screen">
+  <main class="min-h-screen py-24 md:py-0">
     <div class="lg:p-56 flex flex-col space-y-8">
       <div class="space-y-4">
         <h2 class="text-5xl text-white font-semibold">{data.name}</h2>
         <div class="flex space-x-2">
-          <a target="_blank" href={data.deployment} class="text-gray-400 hover:text-white underline text-lg">demo</a>
-          <span class="text-gray-400 hover:text-white text-lg">/</span>
-          <a target="_blank" href={data.githublink} class="text-gray-400 hover:text-white underline text-lg">repo</a>
+          <a target="_blank" href={data.deployment} class="text-content hover:text-white underline text-lg">demo</a>
+          <span class="text-content hover:text-white text-lg">/</span>
+          <a target="_blank" href={data.githublink} class="text-content hover:text-white underline text-lg">repo</a>
         </div>
       </div>
       <Image
         transition:name={data.name}
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
-        class="h-full object-cover pt-4"
+        class="md:h-full object-cover pt-4"
       />
-      <p class="text-lg text-gray-400">{data.description}</p>
+      <p class="text-lg text-content">{data.description}</p>
       
-      <p class="text-lg text-gray-400">
+      <p class="text-lg text-content">
         This app was built with <span class="text-white">{data.stack.join(', ')}</span>.
       </p>
-      <p class="text-lg text-gray-400">Below are list of features that this application has: </p>
+      <p class="text-lg text-content">Below are list of features that this application has: </p>
 
-      <ul class="list-disc text-lg list-inside text-gray-400 marker:text-purple-600">
+      <ul class="list-disc text-lg list-inside text-content marker:text-purple-600">
         {data.features_scope.map((tech) => (
           <li>{tech}</li>
         ))}

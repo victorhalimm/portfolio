@@ -6,7 +6,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'background' : '#13151a'
+				'background' : '#13151a',
+				'accent' : '#9333ea',
+				'content' : '#9ca3af',
+				'subtle' : '#6b7280'
 			},
 			fontFamily: {
 				sans: ['SourceSans3', ...defaultTheme.fontFamily.sans],

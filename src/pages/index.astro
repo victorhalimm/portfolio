@@ -64,14 +64,14 @@ h1 { font-size: 0.5em }
       <div class="text-4xl text-purple-600 tracking-wider">victor halim</div>
     <div class="text-xl flex items-center pt-4 pb-8">
       <span class="text-gray-700">&#10100;</span>
-      <span class="text-gray-500 w-full px-4">
+      <span class="text-content w-full px-4">
         <TypewriterBuilder client:load texts={roles} />
       </span>
       <span class="text-gray-700">&#10101;</span>
     </div>
 
     <div
-      class="flex items-center text-gray-500 flex-wrap font-thin text-3xl justify-between w-1/3"
+      class="flex items-center text-content flex-wrap font-thin text-3xl justify-between w-3/4 md:w-1/3"
     >
       <NavButton href="mailto:victorhalim18@gmail.com" icon={MdOutlineEmail} text="Email" />
       <NavButton href="https://github.com/victorhalimm" icon={FiGithub} text="GitHub" />
@@ -79,7 +79,7 @@ h1 { font-size: 0.5em }
       <NavButton href="https://www.instagram.com/victorhalim_/" icon={FaInstagram} text="Instagram" />
     </div>
 
-    <p class="absolute bottom-8 text-base text-gray-500">
+    <p class="absolute bottom-8 text-base text-content">
       <span class="wave text-lg">👋</span> 
       Open for inquiries.
       <span class="text-purple-600"> Message me here! </span>
@@ -87,20 +87,20 @@ h1 { font-size: 0.5em }
   </main>
 
   <main class="min-h-screen">
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-8  md:gap-4">
       {
         parsedProjectCollections?.map(({data}) => (
           <a
-            class="group h-[50vh] hover:border-2 border-purple-600 duration-100"
+            class="group md:h-[50vh]"
             href=`/projects/${data.route}`
           >
             <Image
                src={im[data.mockup]()} 
                transition:name={data.name}
               alt={`${data.title} mockup`}
-              class="h-full object-cover"
+              class="h-[30vh] md:h-full object-cover md:group-hover:border-2 transition-all duration-75 md:border-accent"
             />
-            <div class="group-hover:text-purple-600 text-gray-400 mt-4 text-base">
+            <div class="group-hover:text-accent text-content mt-2 md:mt-4 text-base">
               {data.title}
             </div>
           </a>
