@@ -24,7 +24,7 @@ const parseCollections = (collections: any) => {
 const parsedProjectCollections = parseCollections(projectCollection)
 
 const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}')
-const roles = ["full-stack developer", "app developer", "full-time laboratory assistant", "開発者"]
+const roles = ["full-stack developer", "app developer", "開発者"]
 ---
 
 
@@ -79,7 +79,7 @@ h1 { font-size: 0.5em }
       <NavButton href="https://www.instagram.com/victorhalim_/" icon={FaInstagram} text="Instagram" />
     </div>
 
-    <p class="absolute bottom-14 text-base text-content">
+    <p class="absolute bottom-14 text-base md:text-lg text-content">
       <span class="wave text-lg">👋</span> 
       Open for inquiries.
       <span class="text-purple-600"> Message me here! </span>
@@ -87,18 +87,18 @@ h1 { font-size: 0.5em }
   </main>
 
   <main class="min-h-[80vh] md:min-h-screen">
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-8  md:gap-4">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-y-12 md:gap-y-8 gap-x-4">
       {
         parsedProjectCollections?.map(({data}) => (
           <a
-            class="group md:h-[50vh]"
+            class="group"
             href=`/projects/${data.route}`
           >
             <Image
                src={im[data.mockup]()} 
                transition:name={data.name}
               alt={`${data.title} mockup`}
-              class="h-[28vh] md:h-full object-cover md:group-hover:border-2 transition-all duration-75 md:border-accent"
+              class="h-[28vh] md:h-[50vh] object-cover md:group-hover:border-2 transition-all duration-75 md:border-accent"
             />
             <div class="group-hover:text-accent text-content mt-2 md:mt-4 text-base">
               {data.title}

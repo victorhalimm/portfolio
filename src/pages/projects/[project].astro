@@ -19,20 +19,30 @@ export async function getStaticPaths() {
 }
 
 const { data } = Astro.props;
-const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}')
+const im = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
+);
 
-console.log(data)
+console.log(data);
 ---
 
 <Layout title=`${data.name}`>
   <main class="min-h-screen py-24 md:py-0">
-    <div class="lg:p-56 flex flex-col space-y-8">
+    <div class="lg:p-56 flex flex-col space-y-12">
       <div class="space-y-4">
-        <h2 class="text-5xl text-white font-semibold">{data.name}</h2>
+        <h2 class="text-5xl text-white font-bold">{data.name}</h2>
         <div class="flex space-x-2">
-          <a target="_blank" href={data.deployment} class="text-content hover:text-white underline text-lg">demo</a>
+          <a
+            target="_blank"
+            href={data.deployment}
+            class="text-content hover:text-white underline text-lg">demo</a
+          >
           <span class="text-content hover:text-white text-lg">/</span>
-          <a target="_blank" href={data.githublink} class="text-content hover:text-white underline text-lg">repo</a>
+          <a
+            target="_blank"
+            href={data.githublink}
+            class="text-content hover:text-white underline text-lg">repo</a
+          >
         </div>
       </div>
       <Image
@@ -42,18 +52,25 @@ console.log(data)
         class="md:h-full object-cover pt-4"
       />
       <p class="text-lg text-content">{data.description}</p>
-      
-      <p class="text-lg text-content">
-        This app was built with <span class="text-white">{data.stack.join(', ')}</span>.
-      </p>
-      <p class="text-lg text-content">Below are list of features that this application has: </p>
-
-      <ul class="list-disc text-lg list-inside text-content marker:text-purple-600">
-        {data.features_scope.map((tech) => (
-          <li>{tech}</li>
-        ))}
-      </ul>
+      <div class="space-y-4 flex flex-col">
+        <h2 class="text-3xl text-white font-semibold">Technology Stack</h2>
+        <p class="text-lg text-content">
+          This app was built with <span class="text-white"
+            >{data.stack.join(", ")}</span
+          >.
+        </p>
+      </div>
+      <div class="space-y-4 flex flex-col">
+        <h2 class="text-3xl text-white font-semibold">Features</h2>
+        <p class="text-lg text-content">
+          Below are list of features that this application has:
+        </p>
+        <ul
+          class="list-disc text-lg list-inside text-content marker:text-purple-600"
+        >
+          {data.features_scope.map((tech) => <li>{tech}</li>)}
+        </ul>
+      </div>
     </div>
   </main>
 </Layout>
-
