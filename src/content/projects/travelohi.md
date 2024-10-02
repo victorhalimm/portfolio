@@ -1,0 +1,32 @@
+---
+title: "Travelohi"
+year: "2024"
+category: "Web Application"
+role: "Fullstack Developer"
+name: "Travelohi"
+description: "Travelohi is a fullstack web application built as a clone of the popular travel booking platform Traveloka. It offers a seamless and interactive experience for booking flights and hotels, with modern technologies and deep learning capabilities integrated for location-based predictions."
+githublink: "https://github.com/victorhalimm/travelohi"
+deployment: "https://travelohi.vercel.app/"
+mockup: "/src/assets/travelohi/travelohi-mockup.png"
+problem: "In a highly competitive online travel industry, users demand intuitive, efficient, and accurate platforms for booking travel services. Traditional booking platforms lack advanced features like AI-powered location suggestions based on images."
+solution: "Travelohi replicates Traveloka’s powerful booking features while integrating AI technology to predict locations from user-uploaded images, giving users a personalized experience for finding travel destinations."
+features_scope:
+  - "Flight and Hotel Booking System"
+  - "Real-time Booking Notifications (Firebase Integration)"
+  - "AlexNet-Powered Location Prediction Based on Uploaded Images"
+  - "Personalized Admin Dashboard for Managing hotels and flights"
+gallery:
+  - "/images/travelohi-screenshot1.png"
+  - "/images/travelohi-screenshot2.png"
+  - "/images/travelohi-screenshot3.png"
+route: "travelohi"
+stack:
+  - "ReactJS"
+  - "SASS"
+  - "Golang"
+  - "Go Fiber"
+  - "Firebase"
+  - "PostgreSQL"
+  - "Flask"
+  - "AlexNet"
+---

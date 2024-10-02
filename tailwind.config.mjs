@@ -2,19 +2,25 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+    darkMode: ['class'],
+    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {
-			colors: {
-				'background' : '#13151a',
-				'accent' : '#9333ea',
-				'content' : '#9ca3af',
-				'subtle' : '#6b7280'
-			},
-			fontFamily: {
-				sans: ['SourceSans3', ...defaultTheme.fontFamily.sans],
-			},
-		},
-	},
-	plugins: [],
+    	extend: {
+    		colors: {
+    			background: '#13151a',
+    			accent: '#9333ea',
+    			content: '#9ca3af',
+    			subtle: '#6b7280'
+    		},
+    		fontFamily: {
+    			sans: ['SourceSans3', ...defaultTheme.fontFamily.sans]
+    		},
+    		borderRadius: {
+    			lg: 'var(--radius)',
+    			md: 'calc(var(--radius) - 2px)',
+    			sm: 'calc(var(--radius) - 4px)'
+    		}
+    	}
+    },
+	plugins: [require("tailwindcss-animate")],
 }

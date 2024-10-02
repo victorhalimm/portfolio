@@ -47,6 +47,7 @@ console.log(data);
       </div>
       <Image
         transition:name={data.name}
+        transition:animate="initial"
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
         class="md:h-full object-cover pt-4"

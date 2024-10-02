@@ -9,6 +9,7 @@ import { getCollection } from "astro:content";
 import TypewriterBuilder from "../components/Typewriter/TypewriterBuilder";
 import { portfolioCollectionsSchema } from "../content/config";
 import {Image} from "astro:assets"
+import { slide } from "astro:transitions";
 
 const projectCollection = await getCollection("projects");
 
@@ -28,33 +29,8 @@ const roles = ["full-stack developer", "app developer", "開発者"]
 ---
 
 
-<style>
-  .wave {
-  animation-name: wave-animation;  
-  animation-duration: 2.5s;        
-  animation-iteration-count: infinite; 
-  transform-origin: 70% 70%; 
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) } 
-  100% { transform: rotate( 0.0deg) }
-}
 
 
-
-
-/* For demonstration purposes only: */
-body { font-size: 3.5em }
-h1 { font-size: 0.5em }
-</style>
 
 
 <Layout title="Victor Halim">
@@ -87,7 +63,7 @@ h1 { font-size: 0.5em }
   </main>
 
   <main class="min-h-[80vh] md:min-h-screen">
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-y-12 md:gap-y-8 gap-x-4">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-y-12 md:gap-y-8 gap-x-3">
       {
         parsedProjectCollections?.map(({data}) => (
           <a

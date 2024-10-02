@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer/Footer.astro";
+import "../globals.css";
 
 interface Props {
   title: string;
@@ -36,6 +37,18 @@ const { title } = Astro.props;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #13151a; 
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #4e1881;
   }
 </style>
 
