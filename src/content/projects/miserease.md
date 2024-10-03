@@ -16,9 +16,7 @@ features_scope:
   - "Task Scheduling and Calendar Integration"
   - "Streamlined All-In-One Dashboard"
 gallery:
-  - "/images/miserease-screenshot1.png"
-  - "/images/miserease-screenshot2.png"
-  - "/images/miserease-screenshot3.png"
+  - "/src/assets/miserease/miserease-mockup.png"
 route: "miserease"
 stack:
   - "React"

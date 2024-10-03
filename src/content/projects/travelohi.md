@@ -16,9 +16,7 @@ features_scope:
   - "AlexNet-Powered Location Prediction Based on Uploaded Images"
   - "Personalized Admin Dashboard for Managing hotels and flights"
 gallery:
-  - "/images/travelohi-screenshot1.png"
-  - "/images/travelohi-screenshot2.png"
-  - "/images/travelohi-screenshot3.png"
+  - "/src/assets/travelohi/travelohi-mockup.png"
 route: "travelohi"
 stack:
   - "ReactJS"
