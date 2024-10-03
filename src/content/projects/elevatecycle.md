@@ -17,9 +17,9 @@ features_scope:
   - "Streamlined All-In-One Dashboard"
 development_process: "ElevateCycle was built using modern web technologies such as React and TailwindCSS for a dynamic, responsive front-end. Node.js and Express were used for the backend, integrating a robust database to store and track user recycling data. The app also features location-based services to help users find nearby recycling centers quickly."
 gallery:
-  - "/images/elevatecycle-screenshot1.png"
-  - "/images/elevatecycle-screenshot2.png"
-  - "/images/elevatecycle-screenshot3.png"
+  - "/src/assets/elevatecycle/elevatecycle-1.png"
+  - "/src/assets/elevatecycle/elevatecycle-2.png"
+  - "/src/assets/elevatecycle/elevatecycle-3.png"
 route: "elevatecycle"
 stack:
   - "React"
