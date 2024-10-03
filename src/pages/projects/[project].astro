@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { FaArrowLeft } from "react-icons/fa6";
+
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -22,24 +24,31 @@ const { data } = Astro.props;
 const im = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
 );
+
 ---
 
 <Layout title=`${data.name}`>
   <main class="min-h-screen py-24 md:py-0">
     <div class="lg:p-56 flex flex-col space-y-12">
+      <h3 class="text-subtle text-xl transition-all duration-100 hover:text-white">
+        <a class="flex gap-x-2 items-center" href="/">
+          <FaArrowLeft />
+          back to home
+        </a>
+      </h3>
       <div class="space-y-4">
         <h2 class="text-5xl text-white font-bold">{data.name}</h2>
         <div class="flex space-x-2">
           <a
             target="_blank"
             href={data.deployment}
-            class="text-content hover:text-white underline text-lg">demo</a
+            class="text-subtle hover:text-white underline text-lg">demo</a
           >
-          <span class="text-content hover:text-white text-lg">/</span>
+          <span class="text-subtle text-lg">/</span>
           <a
             target="_blank"
             href={data.githublink}
-            class="text-content hover:text-white underline text-lg">repo</a
+            class="text-subtle hover:text-white underline text-lg">repo</a
           >
         </div>
         <div class="grid md:grid-cols-2 pt-6 gap-x-4 gap-y-4">
@@ -62,7 +71,7 @@ const im = import.meta.glob<{ default: ImageMetadata }>(
         transition:animate="initial"
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
-        class="md:h-full object-cover rounded-lg pt-4"
+        class="md:h-full h-[25vh] object-cover rounded-lg pt-4"
       />
       <p class="text-lg text-content">{data.description}</p>
       <div class="space-y-4 flex flex-col">
