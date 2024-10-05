@@ -25,7 +25,7 @@ const parseCollections = (collections: any) => {
 const parsedProjectCollections = parseCollections(projectCollection)
 
 const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}')
-const roles = ["full-stack developer", "app developer", "大学生"]
+const roles = [" full-stack developer", " app developer", " 大学生"]
 ---
 
 
@@ -37,7 +37,7 @@ const roles = ["full-stack developer", "app developer", "大学生"]
     <div class="text-xl flex items-center pt-4 pb-8">
       <span class="text-gray-700">{`{`}</span>
       <span class="text-content w-full px-2">
-        <TypewriterBuilder texts={roles} />
+        <TypewriterBuilder client:load texts={roles} />
       </span>
       <span class="text-gray-700">{`}`}</span>
     </div>
