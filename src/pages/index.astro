@@ -35,15 +35,15 @@ const roles = ["full-stack developer", "app developer", "大学生"]
   >
       <div class="text-4xl text-accent tracking-wider">victor halim</div>
     <div class="text-xl flex items-center pt-4 pb-8">
-      <span class="text-gray-700">&#10100;</span>
+      <span class="text-gray-700">{`{`}</span>
       <span class="text-content w-full px-2">
         <TypewriterBuilder client:load texts={roles} />
       </span>
-      <span class="text-gray-700">&#10101;</span>
+      <span class="text-gray-700">{`}`}</span>
     </div>
 
     <div
-      class="animate flex items-center text-content flex-wrap font-thin text-3xl justify-between w-3/4 md:w-1/3"
+      class="animate flex items-center text-content flex-wrap font-thin text-3xl justify-between w-4/5 md:w-1/3"
     >
       <NavButton href="mailto:victorhalim18@gmail.com" icon={MdOutlineEmail} text="Email" />
       <NavButton href="https://github.com/victorhalimm" icon={FiGithub} text="GitHub" />
