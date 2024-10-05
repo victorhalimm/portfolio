@@ -8,7 +8,7 @@ interface Props {
 const TypewriterBuilder = ({ texts }: Props) => {
 
 
-  return <Typewriter text={texts} random={30} speed={60} loop={true} delay={2500} />;
+  return <Typewriter cursor text={texts} random={30} speed={60} loop={true} delay={2500} />;
 };
 
 export default TypewriterBuilder;

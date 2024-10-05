@@ -21,7 +21,7 @@ const NavButton = ({ icon: Icon, text = "", className = "", href }: Props) => {
           hidden lg:block
         "
       >
-        {text}
+        <div className="absolute -bottom-6">{text}</div>
       </span>
     </a>
   );
