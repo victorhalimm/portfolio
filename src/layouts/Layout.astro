@@ -44,7 +44,7 @@ const { title } = Astro.props;
   }
 
   body::-webkit-scrollbar-track {
-    background: #13151a; 
+    background: #13151a;
   }
 
   body::-webkit-scrollbar-thumb {
@@ -57,17 +57,14 @@ const { title } = Astro.props;
 
   const locomotiveScroll = new LocomotiveScroll();
 
-  document.addEventListener("pageshow", () => {
-    window.scrollTo({
-      top: 0,
-    });
-  });
-
   function init() {
-    onScroll();
-    animate();
+    locomotiveScroll.scrollTo(0, {
+      duration: 0,
+      immediate: true
+    });
 
-    document.addEventListener("scroll", onScroll);
+
+    animate();
   }
 
   function animate() {
@@ -80,14 +77,7 @@ const { title } = Astro.props;
     });
   }
 
-  function onScroll() {
-    if (window.scrollY > 0) {
-      document.documentElement.classList.add("scrolled");
-    } else {
-      document.documentElement.classList.remove("scrolled");
-    }
-  }
-
   document.addEventListener("DOMContentLoaded", () => init());
+
   document.addEventListener("astro:after-swap", () => init());
 </script>

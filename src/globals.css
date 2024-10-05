@@ -12,7 +12,7 @@
 
 .animate {
   @apply opacity-0 translate-y-3;
-  @apply transition-all duration-700 ease-out;
+  @apply transition-all duration-500 ease-out;
 }
 
 .animate.show {
