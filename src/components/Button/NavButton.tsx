@@ -2,12 +2,12 @@ import type { IconType } from "react-icons";
 
 interface Props {
   icon: IconType;
-  text: string;
+  text?: string;
   className?: string;
   href : string;
 }
 
-const NavButton = ({ icon: Icon, text, className = "", href }: Props) => {
+const NavButton = ({ icon: Icon, text = "", className = "", href }: Props) => {
   return (
     <a href={href} target="_blank" className={`group hover:text-gray-50 duration-75 ${className}`}>
       <Icon />
