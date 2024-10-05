@@ -8,8 +8,6 @@ description: "Travelohi is a fullstack web application built as a clone of the p
 githublink: "https://github.com/victorhalimm/travelohi"
 deployment: "https://travelohi.vercel.app/"
 mockup: "/src/assets/travelohi/travelohi-mockup.png"
-problem: "In a highly competitive online travel industry, users demand intuitive, efficient, and accurate platforms for booking travel services. Traditional booking platforms lack advanced features like AI-powered location suggestions based on images."
-solution: "Travelohi replicates Traveloka’s powerful booking features while integrating AI technology to predict locations from user-uploaded images, giving users a personalized experience for finding travel destinations."
 features_scope:
   - "Flight and Hotel Booking System"
   - "Real-time Booking Notifications (Firebase Integration)"

@@ -9,8 +9,6 @@ export const portfolioSchema = z.object({
   description: z.string(),
   githublink: z.string().url(),
   mockup: z.string(),
-  problem: z.string(),
-  solution: z.string(),
   gallery: z.array(z.string()),
   route: z.string(),
   stack: z.array(z.string()),
