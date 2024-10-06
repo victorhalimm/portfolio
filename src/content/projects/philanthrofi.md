@@ -1,0 +1,31 @@
+---
+title: "PhilanthroFi"
+year: "2024"
+category: "Web3 Application"
+role: "Fullstack Developer"
+name: "PhilanthroFi"
+description: "PhilanthroFi is a web3 charity app we built for the Codefest Hackathon, running on the ICP blockchain. The idea behind it is to make donations super transparent and secure, with every transaction visible on-chain. It’s got features like wallet plug payments, a charity listing platform to explore different causes, and tools for managing your donations easily. Our team — Christopher Alden, Darryl Effendi, Davis Kelvin, Eldrian Daniswara, and me — wanted to create a space where people could confidently give and track their impact in real-time."
+deployment: "https://victorhalim.dev"
+githublink: "https://github.com/Darryleffendi/PhilanthroFi"
+mockup: "/src/assets/philanthrofi/philanthrofi-mockup.png"
+features_scope:
+  - "ICP Identity Authentication for Secure User Login"
+  - "ICP Wallet Integration for Seamless Donations"
+  - "Charity Listing Platform to Explore Various Causes"
+  - "Transparent Donation Tracking for Real-Time Fund Monitoring"
+  - "Charity Management Tools for Easy Donation and Update Handling"
+  - "On-Chain Transaction History for Full Transparency and Accountability"
+gallery:
+  - "/src/assets/philanthrofi/philanthrofi-mockup.png"
+  - "/src/assets/philanthrofi/philanthrofi-1.png"
+  - "/src/assets/philanthrofi/philanthrofi-2.png"
+  - "/src/assets/philanthrofi/philanthrofi-3.png"
+  - "/src/assets/philanthrofi/philanthrofi-4.png"
+route: "philanthrofi"
+stack:
+  - "Motoko"
+  - "React"
+  - "TailwindCSS"
+  - "Shadcn"
+  - "Framer Motion"
+---
