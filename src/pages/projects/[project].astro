@@ -4,7 +4,6 @@ import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { FaArrowLeft } from "react-icons/fa6";
 
-
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
 
@@ -24,13 +23,14 @@ const { data } = Astro.props;
 const im = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
 );
-
 ---
 
 <Layout title=`${data.name}`>
   <main class="min-h-screen py-24 md:py-0">
     <div class="lg:p-56 flex flex-col space-y-12">
-      <h3 class="animate text-subtle text-xl transition-all duration-100 hover:text-white">
+      <h3
+        class="animate text-subtle text-xl transition-all duration-100 hover:text-white"
+      >
         <a class="flex gap-x-2 items-center" href="/">
           <FaArrowLeft />
           back to home
@@ -52,21 +52,18 @@ const im = import.meta.glob<{ default: ImageMetadata }>(
           >
         </div>
         <div class="animate grid md:grid-cols-2 pt-6 gap-x-4 gap-y-4">
-          <div
-            class="flex flex-col space-y-2"
-          >
+          <div class="flex flex-col space-y-2">
             <p class="text-white">Role</p>
             <p class="text-accent">{data.role}</p>
           </div>
-          <div
-            class="flex flex-col space-y-2"
-          >
+          <div class="flex flex-col space-y-2">
             <p class="text-white">Category</p>
             <p class="text-accent">{data.category}</p>
           </div>
         </div>
       </div>
       <Image
+        draggable={false}
         transition:name={data.name}
         transition:animate="initial"
         src={im[data.mockup]()}

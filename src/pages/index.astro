@@ -67,6 +67,7 @@ const roles = ["full-stack developer", "app developer", "大学生"]
             href=`/projects/${data.route}`
           >
             <Image
+              draggable={false}
                src={im[data.mockup]()} 
                transition:name={data.name}
               alt={`${data.title} mockup`}
