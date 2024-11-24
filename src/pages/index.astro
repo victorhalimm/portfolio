@@ -9,7 +9,6 @@ import { getCollection } from "astro:content";
 import TypewriterBuilder from "../components/Typewriter/TypewriterBuilder";
 import { portfolioCollectionsSchema } from "../content/config";
 import {Image} from "astro:assets"
-import { slide } from "astro:transitions";
 
 const projectCollection = await getCollection("projects");
 
@@ -71,7 +70,7 @@ const roles = ["full-stack developer", "app developer", "大学生"]
                src={im[data.mockup]()} 
                transition:name={data.name}
               alt={`${data.title} mockup`}
-              class="h-[28dvh] md:h-[50dvh] object-cover md:group-hover:border-[3px] transition-all duration-75 md:border-accent"
+              class="h-[28dvh] md:h-[43dvh] object-cover md:group-hover:border-[3px] transition-all duration-75 md:border-accent"
             />
             <div class="group-hover:text-accent text-content mt-2 md:mt-4 text-base">
               {data.title}
