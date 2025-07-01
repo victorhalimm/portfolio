@@ -68,7 +68,7 @@ const im = import.meta.glob<{ default: ImageMetadata }>(
         transition:animate="initial"
         src={im[data.mockup]()}
         alt={`${data.title} mockup`}
-        class="md:h-full h-[25dvh] object-cover pt-4"
+        class="md:h-full min-h-48 object-cover pt-4"
       />
       <p class="animate text-lg text-content">{data.description}</p>
       <div class="animate space-y-4 flex flex-col">
@@ -97,7 +97,7 @@ const im = import.meta.glob<{ default: ImageMetadata }>(
               draggable={false}
               src={im[imageUrl]()}
               alt={`${data.title} mockup`}
-              class="md:h-full object-cover pt-4"
+              class="md:h-full min-h-48 object-cover pt-4"
             />
           ))
         }
