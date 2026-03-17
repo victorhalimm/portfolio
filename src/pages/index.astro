@@ -10,16 +10,16 @@ import TypewriterBuilder from "../components/Typewriter/TypewriterBuilder";
 import { portfolioCollectionsSchema } from "../content/config";
 import {Image} from "astro:assets"
 
-const projectCollection = await getCollection("projects");
+const projectCollection = await getCollection('projects')
 
 const parseCollections = (collections: any) => {
-  try {
-      return portfolioCollectionsSchema.parse(collections);
-  } catch (err: any) {
-    console.log(err.message)
-    return null
-  }
-};
+    try {
+        return portfolioCollectionsSchema.parse(collections)
+    } catch (err: any) {
+        console.log(err.message)
+        return null
+    }
+}
 
 const parsedProjectCollections = parseCollections(projectCollection)
 
@@ -27,12 +27,11 @@ const im = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,
 const roles = ["swe intern @ blibli", "full-stack developer", "full-time student"]
 ---
 
-
 <Layout title="Victor Halim">
   <main
     class="relative w-full min-h-screen flex flex-col items-center justify-center"
   >
-      <div class="text-5xl font-bold text-accent tracking-wider">victor halim</div>
+      <div class="text-4xl md:text-6xl text-accent font-serif">victor halim</div>
     <div class="text-xl flex items-center pt-4 pb-8">
       <span class="text-gray-700">{`{`}</span>
       <span class="text-content w-full text-center pl-3 pr-1 md:px-2">
@@ -50,8 +49,8 @@ const roles = ["swe intern @ blibli", "full-stack developer", "full-time student
       <NavButton href="https://www.instagram.com/victorhalim_/" icon={FaInstagram} text="Instagram" />
     </div>
 
-    <p class="absolute bottom-14 text-base md:text-lg text-content">
-      <span class="wave text-lg">👋</span> 
+    <p class="absolute bottom-14 text-sm md:text-lg text-content">
+      <span class="wave text-lg">👋</span>
       Open for inquiries.
       <a href="files/victor-halim-resume.pdf" class="text-accent hover:underline transition duration-100">Download my Resume!</a>
     </p>
@@ -67,7 +66,7 @@ const roles = ["swe intern @ blibli", "full-stack developer", "full-time student
           >
             <Image
               draggable={false}
-               src={im[data.mockup]()} 
+               src={im[data.mockup]()}
                transition:name={data.name}
               alt={`${data.title} mockup`}
               class="min-h-48 md:h-[43dvh] object-cover md:group-hover:border-[3px] transition-all duration-75 md:border-accent"
@@ -81,5 +80,3 @@ const roles = ["swe intern @ blibli", "full-stack developer", "full-time student
     </div>
   </main>
 </Layout>
-
-
